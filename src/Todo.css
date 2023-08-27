@@ -1,90 +1,132 @@
-.button {
-    background-image: linear-gradient(#0dccea, #0d70ea);
-    border: 0;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-family: Montserrat, sans-serif;
-    font-size: .9em;
-    margin: 5px;
-    padding: 5px 15px;
-    text-align: center;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+html {
+    font-size: 62.5%;
 }
 
-.buttonRemove {
-    background-image: linear-gradient(#f48758, #ad170c);
-    border: 0;
-    border-radius: 50px;
-    box-shadow: rgba(231, 200, 200, 0.3) 0 5px 15px;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-family: Montserrat, sans-serif;
-    font-size: .8em;
-    margin: 2px;
-    padding: 1px 10px;
-    text-align: center;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+/* Desktops, large screens.) */
+@media only screen and (min-width: 1025px) {
+    html {
+        font-size: 82.66%;
+    }
+
+    .box {
+        width: 30vw;
+        
+    }
 }
 
-.button:active {
-    background-image: linear-gradient(#0dccea, #f04115);
+/*  Small screens, laptops. */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 64%;
+    }
+
+    .box {
+        width: 30vw;
+       
+    }
+
+
+}
+
+/* iPads, Tablets. */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    html {
+        font-size: 48%;
+    }
+
+    .box {
+        width: 50vw;
+    }
+
+
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 35%;
+    }
+
+    .box {
+        width: 95vw;
+        
+        height: fit-content;
+        min-height: 100vh;
+    }
+}
+
+
+.button1{
+    border: 1pt solid blue;
+    background-color: blue;
+    height: 100%;
+    width: height;
+    border-radius: 100%;
+}
+.button2{
+    border: 1pt solid rgb(245, 3, 3);
+    background-color: red;
     font-weight: bold;
+    height: 100%;
+    width: height;
+    border-radius: 100%;
 }
-
-
+.Add{
+    width: 2rem;
+    height: 2rem;
+}
 .bar {
-    font-size: 30px;
+    font-size: 3.0rem;
+    margin-top: .3rem;
+    border-radius: 1rem;
     font-weight: bold;
     background-color: #8981f5;
-    width: 20vw;
+    width: 90%;
     height: 8vh;
-    padding: 5pt;
+    padding: .5rem;
     text-align: center;
     vertical-align: middle;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 .3rem .6rem rgba(0, 0, 0, 0.16), 0 .3rem .6rem rgba(0, 0, 0, 0.23);
     color: #faf7f7;
-    text-shadow: 1px 1px 2px black, 0 0 25px rgb(237, 105, 23), 0 0 5px rgb(237, 78, 15);
+    text-shadow: .1rem .1rem .2rem black, 0 0 2.5rem rgb(237, 105, 23), 0 0 .5rem rgb(237, 78, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
-    border-radius: 10px;
+    border-radius: 2.0rem;
     background-color: #f71984;
-    width: 25vw;
-    height: fit-content;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 2;
-    gap: 5pt;
-    box-shadow: 0 8px 10px -5px rgb(0 0 0 / 16%), 0 16px 24px 2px rgb(0 0 0 / 11%), 0 6px 30px 5px rgb(0 0 0 / 10%);
+    gap: .5rem;
+    box-shadow: 0 .8rem 1.0rem -.5rem rgb(0 0 0 / 16%), 0 1.6rem 2.4rem .2rem rgb(0 0 0 / 11%), 0 .6rem 3.0rem .5rem rgb(0 0 0 / 10%);
+
 }
 
 .box1 {
-    width: 90%;
+    width: 95%;
     height: fit-content;
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
+    align-items: center;
+    //border: 2pt solid red;
 }
 
 .box2 {
-    width: 22vw;
+    width: 93%;
     height: fit-content;
     min-height: 40vh;
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: .2;
+    gap: .5rem;
+    //border: 2pt solid yellow;
 }
 
 .box3 {
@@ -92,8 +134,9 @@
     height: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
- 
+    justify-content:space-between;
+    align-items:center;
+//border: 2pt solid green;
 }
 
 body {
@@ -103,15 +146,15 @@ body {
 input {
     //-webkit-appearance: none;
     appearance: none;
-    width: 70%;
+    width: 88%;
     height: 7vh;
     background-color: transparent;
-    border: 0px solid;
+    border: 0rem solid;
     font-family: inherit;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 190%;
     font-weight: bold;
-    box-shadow: inset 0 -1px 0;
+    box-shadow: inset 0 -.1rem 0;
 
 }
 
@@ -127,6 +170,6 @@ input {
 
     text-align: left;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
 }

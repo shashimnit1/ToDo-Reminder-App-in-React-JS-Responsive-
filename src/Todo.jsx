@@ -23,12 +23,13 @@ const Todo = () => {
     const addTask = () => {
         setmsg([...msg, inText])
         clearInput()     
-        console.log(msg)
+        
     }
     const remove=(event)=>{
-        alert("Do You want to delete following:\n"+event.target.name)
-        const tempList=msg.filter((x)=>x!==event.target.name);
-        setmsg(tempList);
+        console.log(event.target.name)
+          alert("Do You want to delete following:\n"+event.target.name)
+          const tempList=msg.filter((x)=>x!==event.target.name);
+          setmsg(tempList);
         
     }
     
@@ -39,14 +40,16 @@ const Todo = () => {
                 <div className="bar"> To-Do List</div>
                 <div className="box1">
                     <input type="text" id="input" placeholder="Enter a Task" onChange={update} />
-                    <button  onClick={addTask}> <AddCircleOutlinedIcon/> </button>
+                    <button class="btn button1" onClick={addTask}><i class="fa fa-plus"></i></button>
+                    {/* <button  onClick={addTask}> <AddCircleOutlinedIcon className="Add" /> </button> */}
                 </div>
                 <div className="box2">
                     {msg.map((currentElement, index) => {
                         return (
                             <div className="box3">
                                 <div className="task">{index + 1}. {currentElement}</div>
-                                <button className="buttonRemove" name={currentElement} onClick={remove}> x </button>
+                                {/* <button className="buttonRemove" name={currentElement} onClick={remove}>x</button> */}
+                                <button className="button2" name={currentElement} onClick={remove}>X</button>
                             </div>
                         );
                     })}

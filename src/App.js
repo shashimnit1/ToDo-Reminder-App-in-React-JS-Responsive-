@@ -8,8 +8,8 @@ function App() {
     height: "100vh",
     padding: "5pt",
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    flexDirection: "row",
+    alignItems: "start",
     justifyContent: "center",
     flexWrap: "wrap",
     
